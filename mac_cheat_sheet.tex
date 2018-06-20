@@ -1,0 +1,130 @@
+%---------------------------%
+%----- Package imports -----%
+%---------------------------%
+
+% Document setup
+\documentclass[12pt, a4paper]{article}
+\usepackage[top=1.25cm, bottom=1.25cm, left=1.25cm, right=1.25cm, landscape]{geometry} 
+
+% Language and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% For importing graphics
+\usepackage{graphicx}
+
+% All the useful AMS packages + some AMS bug fixes
+\usepackage{amsmath,amsthm, amsfonts, amssymb}	
+\usepackage{mathtools}
+
+% Other
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+
+%---------------------------%
+%------ Package setup ------%
+%---------------------------%
+
+% Path to graphics
+\graphicspath{{figures/}}
+
+% Style of enumitem
+\renewcommand{\descriptionlabel}[1]{\hspace{2em}\large \ttfamily \textbf{#1}}
+
+% Style of tcolorbox
+\newtcbox
+{\mybox}[1][red]{on line,
+	arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+	before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+	boxsep=0pt,left=6pt,right=6pt,top=5pt,bottom=3pt}
+
+%---------------------------%
+%------ Misc settings ------%
+%---------------------------%
+
+% Paragraph skip
+\setlength{\parskip}{1ex}
+
+%---------------------------%
+%------ Document start -----%
+%---------------------------%
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+	\raisebox{1em}{\Huge \bfseries \ttfamily CHEAT SHEET:} \hspace{2em}  \includegraphics[height=2cm]{apple}
+\end{center}
+
+\vspace{1em}
+
+\begin{multicols}{3}
+
+	\mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Window resizing}}
+	
+	\begin{description}
+		\item[Center] \hfill \texttt{alt} + \texttt{cmd} + \texttt{C}
+		\item[Full] \hfill \texttt{alt} + \texttt{cmd} + \texttt{F}
+		\item[] 
+		\item[Left half] \hfill \texttt{alt} + \texttt{cmd} + $\leftarrow$
+		\item[Right half] \hfill \texttt{alt} + \texttt{cmd} + $\rightarrow$
+		\item[Upper half] \hfill \texttt{alt} + \texttt{cmd} + $\uparrow$
+		\item[Lower half] \hfill \texttt{alt} + \texttt{cmd} + $\downarrow$
+		\item[] 
+		\item[Upper left] \hfill \texttt{ctrl} + \texttt{cmd} + $\leftarrow$
+		\item[Upper right] \hfill \texttt{ctrl} + \texttt{cmd} + $\rightarrow$
+		\item[Lower left] \hfill \texttt{shift} + \texttt{ctrl} + \texttt{cmd} + $\leftarrow$
+		\item[Lower right] \hfill \texttt{shift} + \texttt{ctrl} + \texttt{cmd} + $\rightarrow$
+		\item[] 
+		\item \textit{To use this, install Spectable from}
+		\item \hfill \textit{https://github.com/eczarny/spectacle}
+		\item[] 
+		\item[] 
+	\end{description}
+
+	\columnbreak
+
+	\mybox[purple]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Shortcuts}}
+	
+	\begin{description}
+		\item[Hard brackets [\textbf{]}] \hfill \texttt{alt} + \texttt{()}
+		\item[Curly brackets \{\}] \hfill \texttt{shift} + \texttt{alt} + \texttt{()}
+		\item[] 
+		\item[Pipe |] \hfill \texttt{alt} + \texttt{7}
+		\item[Backslash] $\mathbf{\backslash}$ \hfill \texttt{shift} + \texttt{alt} + \texttt{7}
+		\item[] 
+		\item[Tilde \~] \hfill \texttt{alt} + \texttt{\^} 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+	\end{description}
+
+	\columnbreak
+	
+	\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Trackpad}}
+	
+	\begin{description}
+		\item[Swipe between pages] \hfill Swipe left/right with two fingers
+		\item[Swipe between workspaces] \hfill Swipe left/right with three fingers
+		\item[Notification center] \hfill Swipe from right edge with two fingers
+		\item[Mission control] \hfill Swipe up with three fingers
+		\item[App exposé] \hfill Swipe down with three fingers
+		\item[Launchpad] \hfill Pinch with thumb and three fingers 
+		\item[Show desktop] \hfill Spread with thumb and three fingers
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[] 
+		\item[]
+	\end{description}
+\end{multicols}
+\end{document}
